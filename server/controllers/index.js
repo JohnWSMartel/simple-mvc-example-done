@@ -181,7 +181,7 @@ const setDogName = (req, res) => {
 		age: req.body.breed,
 	};
 	
-	new newDog = new Dog(dogData);
+	const newDog = new Dog(dogData);
 	
 	savePromise.then(() => {
 		lastDogAdded = newDog;
