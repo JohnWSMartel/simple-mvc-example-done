@@ -261,13 +261,13 @@ const searchDogName = (req, res) => {
 	const savePromise = lastDogAdded.save();
 	
 	//Adding comment so git processes change in spacing
-	savePromise.then (() =>
-		res.json({
-			name: lastDogAdded.name,
-			breed: lastDogAdded.breed,
-			age: lastDogAdded.age
-		})
-	);
+    savePromise.then (() =>
+        res.json({
+            name: lastDogAdded.name,
+            breed: lastDogAdded.breed,
+            age: lastDogAdded.age
+        })
+    );
 	
 	savePromise.catch(saveError => res.json({saveError}));
 	
