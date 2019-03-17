@@ -260,7 +260,7 @@ const searchDogName = (req, res) => {
 	lastDogAdded.age++;
 	const savePromise = lastDogAdded.save();
 	
-	//Adding comment so git processes change in spacing
+	
     savePromise.then (() =>
         res.json({
             name: lastDogAdded.name,
